@@ -17,7 +17,7 @@ def select_name_and_series_subgenres_of_authors
    INNER JOIN subgenres ON Subgenres.id = Series.subgenre_id;"
 end
 
-def select_series_title_with_most_human_characters
+def select_series_title_with_most_human_characters # Weird
   "SELECT title FROM (SELECT Series.title, COUNT(Characters.species) FROM series
    INNER JOIN characters ON Characters.author_id = Series.author_id
    WHERE Characters.species = 'human'
