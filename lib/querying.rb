@@ -20,8 +20,7 @@ end
 def select_series_title_with_most_human_characters
   "SELECT Series.title FROM series
    INNER JOIN characters ON Characters.author_id = Series.author_id
-   WHERE Characters.species = 'human'
-   GROUP BY COUNT(species);" 
+   WHERE Characters.species = 'human';" 
 end
 
 def select_character_names_and_number_of_books_they_are_in
